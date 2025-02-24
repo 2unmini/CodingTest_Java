@@ -30,11 +30,11 @@ public class Main {
         return false;
        }
         for (int i = 1; i <= arr2.size()-1; i++) {
-            if (arr1.get(++idx)!= arr2.get(i)) {
-                return false;
+            if (arr1.subList(i, i + arr2.size()).equals(arr2)) {
+                return true;
             }
 
         }
-        return true;
+        return false;
     }
 }
