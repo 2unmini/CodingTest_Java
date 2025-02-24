@@ -25,12 +25,10 @@ public class Main {
 
     }
     public static boolean check(ArrayList arr1,ArrayList arr2) {
-       int idx =arr1.indexOf(arr2.get(0));
-       if(idx==-1){
-        return false;
-       }
-        for (int i = 1; i <= arr2.size()-1; i++) {
-            if (arr1.subList(i, i + arr2.size()).equals(arr2)) {
+       int size1 =arr1.size();
+       int size2 =arr2.size();
+        for (int i = 0; i <= size1-size2; i++) {
+            if (arr1.subList(i, i + size2).equals(arr2)) {
                 return true;
             }
 
