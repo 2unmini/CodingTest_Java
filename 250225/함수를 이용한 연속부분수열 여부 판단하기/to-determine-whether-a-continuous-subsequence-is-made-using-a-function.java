@@ -32,6 +32,7 @@ public class Main {
             idx=i;
             break;
         }
+        if (idx == -1) return false;
        }
         for (int i = 1; i <= arr2.length-1; i++) {
             if (arr1[++idx] != arr2[i]) {
