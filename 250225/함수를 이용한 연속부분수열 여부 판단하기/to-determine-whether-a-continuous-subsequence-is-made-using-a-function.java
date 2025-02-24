@@ -23,15 +23,21 @@ public class Main {
             System.out.print("No");
 
         }
-        
+
     }
     public static boolean check(int[] arr1,int[] arr2) {
-        int idx = Arrays.asList(arr1).indexOf(arr2[0]);
-        for (int i = 1; i < arr2.length-2; i++) {
-            if (arr1[idx++] != arr2[i]) {
+       int value=arr2[0];
+       int idx=0;
+       for(int i=0;i<arr1.length;i++) {
+        if(arr1[i]==value){
+            idx=i;
+        }
+       }
+        for (int i = 1; i <= arr2.length-1; i++) {
+            if (arr1[++idx] != arr2[i]) {
                 return false;
             }
-            
+
         }
         return true;
     }
