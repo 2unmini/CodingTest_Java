@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -31,6 +30,7 @@ public class Main {
        for(int i=0;i<arr1.length;i++) {
         if(arr1[i]==value){
             idx=i;
+            break;
         }
        }
         for (int i = 1; i <= arr2.length-1; i++) {
