@@ -1,22 +1,22 @@
-import java.util.Scanner;
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();
 
-        int[] arr1=new int[n1];
-        int[] arr2=new int[n2];
+        ArrayList<Integer> list1 =new ArrayList();
+        ArrayList<Integer> list2 =new ArrayList();
 
         for(int i=0;i<n1;i++) {
-            arr1[i]= sc.nextInt();
+            list1.add(sc.nextInt());
         }
 
         for(int i=0;i<n2;i++) {
-            arr2[i]= sc.nextInt();
+            list2.add(sc.nextInt());
         }
 
-        if(check(arr1,arr2)){
+        if(check(list1,list2)){
             System.out.print("Yes");
         }else{
             System.out.print("No");
@@ -24,17 +24,13 @@ public class Main {
         }
 
     }
-    public static boolean check(int[] arr1,int[] arr2) {
-       int value=arr2[0];
-       int idx=0;
-       for(int i=0;i<arr1.length;i++) {
-        if(arr1[i]==value){
-            idx=i;
-            break;
-        }
+    public static boolean check(ArrayList arr1,ArrayList arr2) {
+       int idx =arr1.indexOf(arr2.get(0));
+       if(idx==-1){
+        return false;
        }
-        for (int i = 1; i <= arr2.length-1; i++) {
-            if (++idx >= arr1.length||arr1[idx] != arr2[i]) {
+        for (int i = 1; i <= arr2.size()-1; i++) {
+            if (arr1.get(++idx)!= arr2.get(i)) {
                 return false;
             }
 
