@@ -30,6 +30,7 @@ public class Main {
             }
             default:
             System.out.println("Yes");
+             break;
 
 
         }
