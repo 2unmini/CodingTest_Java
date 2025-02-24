@@ -61,27 +61,15 @@ public class Main {
     
     public static boolean invalidD(int m ,int d,boolean f) {
 
-        switch(m){
-            case 1: case 3:case 5: case 7:case 8: case 10: case 12 : {
-                if(d>31){
-                    return false;
-                }
-            }
-            case 4 :case 6 : case 9 :case 11:{
-                if(d>30){
-                    return false;
-                }
-            }
-            case 2:{
-                int day = f?29:28;
-                if(d>day){
-                    return false;
-                }
-            }
+         switch (m) {
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                return d >= 1 && d <= 31;
+            case 4: case 6: case 9: case 11:
+                return d >= 1 && d <= 30;
+            case 2:
+                return d >= 1 && d <= (f ? 29 : 28);
             default:
-                return true;
-
-
+                return false;
         }
         
     }
