@@ -1,32 +1,38 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         char o = sc.next().charAt(0);
         int c = sc.nextInt();
+
         // Please Write your code.
-        int invalid = invalid(o, a, c);
-        System.out.println(a+" "+ o+" "+c+" = " +invalid);
+        System.out.println(cal(a, o, c));
+
     }
 
 
-    public static int invalid(char o,int a,int b) {
+    public static String cal(int a, char o, int c) {
+        StringBuilder result = new StringBuilder();
+
+        result.append(a).append(" ").append(o).append(" ").append(c);
+
         switch (o) {
             case '+': {
-                return a + b;
+                return result.append(" = ").append(a + c).toString();
             }
             case '-': {
-                return a - b;
-            }
-            case '/': {
-                return a / b;
+                return result.append(" = ").append(a - c).toString();
             }
             case '*': {
-                return a * b;
+                return result.append(" = ").append(a * c).toString();
+            }
+            case '/': {
+                return result.append(" = ").append(a / c).toString();
             }
             default:
-                return 0;
+                return "False";
         }
     }
 }
