@@ -11,6 +11,6 @@ public class Main {
     }
 
     public static void swap(int a, int b){
-        System.out.print(b+10+" "+a*2);
+        System.out.print((b+10)+" "+(a*2));
     }
 }
