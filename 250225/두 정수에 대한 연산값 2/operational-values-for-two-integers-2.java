@@ -11,6 +11,17 @@ public class Main {
     }
 
     public static String swap(int a, int b){
-        return a<b ? a+10 + " " + 2*b : 2*a + " " + b+10;
+        int aResult = 0;
+        int bResult = 0;
+        
+        if(a<b) {
+            aResult = a+10;
+            bResult = 2*b;
+        } else {
+            aResult = 2*a;
+            bResult = b+10;
+        }
+        
+        return aResult + " " + bResult;
     }
 }
