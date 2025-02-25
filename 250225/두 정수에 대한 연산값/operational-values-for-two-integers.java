@@ -7,7 +7,11 @@ public class Main {
         int b = sc.nextInt();
         // Please Write your code.
         int[] c = swap(a,b);
-        System.out.print(c[0]+" "+c[1] ); 
+        if(c[0]>c[1]){
+          System.out.print(c[1]+" "+c[0] );  
+        }else{
+            System.out.print(c[0]+" "+c[1] );
+        }
     }
 
     public static int[] swap(int a, int b) {
