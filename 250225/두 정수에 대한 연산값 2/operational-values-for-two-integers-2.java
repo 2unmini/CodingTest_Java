@@ -1,16 +1,16 @@
-import java.util.Scanner;
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
+        
         // Please Write your code.
-        int max = Math.max(a,b);
-        int min = Math.min(a,b);
-        swap(max,min);
+        System.out.println(swap(a, b));
     }
 
-    public static void swap(int a, int b){
-        System.out.print((b+10)+" "+(a*2));
+    public static String swap(int a, int b){
+        return a<b ? a+10 + " " + 2*b : 2*a + " " + b+10;
     }
 }
