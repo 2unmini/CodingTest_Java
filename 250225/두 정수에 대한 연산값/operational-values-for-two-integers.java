@@ -6,12 +6,16 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
         // Please Write your code.
-        swap(a,b);
+        int[] c = swap(a,b);
+        System.out.print(c[0]+" "+c[1] ); 
     }
 
-    public static void swap(int a, int b) {
+    public static int[] swap(int a, int b) {
         int s = 2 * Math.min(a,b);
         int x = Math.max(a,b)+25;
-        System.out.print(s+" "+x);
+        int [] c =new int [2];
+        c[0]=s;
+        c[1]=x;
+        return c;
     }
 }
