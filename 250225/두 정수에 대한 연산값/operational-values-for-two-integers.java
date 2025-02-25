@@ -11,7 +11,7 @@ public class Main {
 
     public static void swap(int a, int b) {
         int s = 2* (int)Math.min(a,b);
-        int x = b+25;
+        int x = (int)Math.max(a,b)+25;
         System.out.print(s+" "+x);
     }
 }
