@@ -16,7 +16,7 @@ public class Main {
         ArrayList<String> list = new ArrayList();
         Arrays.sort(words);
         for(String word:words){
-            if(word.contains(t)){
+            if(word.startsWith(t)){
                 list.add(word);
             }
         }
