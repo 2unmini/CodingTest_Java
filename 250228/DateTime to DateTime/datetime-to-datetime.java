@@ -8,6 +8,7 @@ public class Main {
         // Please write your code here.
         if(A < 11 || (A == 11 && B < 11) || (A == 11 && B == 11 && C < 11)){
             System.out.print(-1);
+            return;
         }       
         int cnt = (A-11)*1440+(B-11)*60+(C-11);
         System.out.print(cnt);
