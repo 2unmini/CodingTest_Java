@@ -19,6 +19,9 @@ public class Main {
             if(s.equals("(")){
                 stack.push(s);
             }else if(s.equals(")")){
+                if(stack.isEmpty()){
+                    return false;
+                }
                 stack.pop();            
             }else{
                 return false;
