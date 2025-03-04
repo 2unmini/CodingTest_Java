@@ -14,13 +14,14 @@ public class Main {
 
     public static boolean check(String[] arr){
         Stack<String> stack =new Stack();
-        boolean checking = true;
 
         for(String s:arr){
             if(s.equals("(")){
                 stack.push(s);
             }else if(s.equals(")")){
                 stack.pop();            
+            }else{
+                return false;
             }
         }
         return stack.isEmpty();
